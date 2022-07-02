@@ -1,8 +1,6 @@
 /* Ejercicio 4*/
 
-export function convertirARomano();
-
-function convertirARomano(num) { 
+export function convertirARomano(num) { 
     let romanos = {
         M:1000,
         CM:900,
@@ -17,10 +15,10 @@ function convertirARomano(num) {
         V:5,
         IV:4,
         I:1};
-    let numARomano = '',i;
+    let numARomano = '', i
     if(num>3999)
     {
-        return "ERROR (excede máximo en numeros romanos (4000))";
+        return "ERROR (excede máximo en numeros romanos (4000))"
     }
     else
     {
@@ -28,10 +26,10 @@ function convertirARomano(num) {
     { 
         while ( num >= romanos[i] ) 
         {
-            numARomano += i; 
-            num -= romanos[i];
+            numARomano += i
+            num -= romanos[i]
         } 
     } 
     }
-    return numARomano; 
+    return numARomano
     }

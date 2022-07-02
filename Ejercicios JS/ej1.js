@@ -1,29 +1,22 @@
 /* Ejercicio 1*/
 
-export function adicion();
-export function resta();
-
-function adicion(array, numero){
-    let arrayToNumber = "";
-    for(num of array)
-    {
-        arrayToNumber += num.toString();
-    }
+export function adicion(array, numero){
+    let arrayToNumber = ""
+    array.forEach(element => {
+        arrayToNumber += element.toString()
+    })
 
     arrayToNumber = (Number(arrayToNumber)+numero);
-    console.log(arrayToNumber);
-    arrayToNumber = arrayToNumber.toString().split("").map(elem=>Number(elem));
-    console.log(arrayToNumber);
+    arrayToNumber = arrayToNumber.toString().split("").map(elem=>Number(elem))
 
     return arrayToNumber
 }
 
-function resta(array, numero){
-    let arrayToNumber = "";
-    for(num of array)
-    {
-        arrayToNumber += num.toString();
-    }
+export function resta(array, numero){
+    let arrayToNumber = ""
+    array.forEach(element => {
+        arrayToNumber += element.toString()
+    })
 
     if((Number(arrayToNumber)-numero) < 0) {
         arrayToNumber=[0]

@@ -1,20 +1,12 @@
 /* Ejercicio 2*/
 
-export function hayParOPareja();
-
-function hayParOPareja(array){
-    let pares=[];
-    let b=false;
-        for(num of array)
-        {
-            if(num%2===0 && num!==0)
-            {
-                pares.push(num);
-            }
-        }
+export function hayParOPareja(array){
+    let b=false
+    let pares = array.filter(
+        (numero) => numero % 2 == 0 && numero!==0)
         if(pares.length===0)
         {
-            return b;
+            return b
         }
         for(let m=0;m<array.length;m++)
         {
@@ -23,9 +15,9 @@ function hayParOPareja(array){
                 for(let k=0;k<pares.length;k++)
                 {
                     if(array[m] + array[j] === pares[k])
-                    b=true;
+                    b=true
                 }
             }
         }
-    return b;
+    return b
 }
